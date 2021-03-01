@@ -18,7 +18,7 @@ ____
 - Arithmetic (takes shrink wrapped trabecular space - actual trabecular space to get trabeculae)
 - Erosion and dilation by 1px (setting: 3D ball) to clean up any noise at border.
 
-
+____ 
 ### Implementing the Method:
 
 
