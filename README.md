@@ -1,12 +1,16 @@
 # Trabecular_Segmentation_Avizo
+
 ### How to automatically segment trabecular and cortical bone in CT scans, using Avizo. 
 Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Felder](https://github.com/alessandrofelder). 
 
-:pencil:  <!-- Please read our [preprint](link to preprint), which we have just submitted to Royal Society Open Science. -->
+
+:pencil:  <!-- Please read our [preprint](link to preprint), which we are submitting to Royal Society Open Science. -->
 
 :computer: CT scan data from our paper can be found on [Figshare](link to figshare account)
 
 The method is shared under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), which means you can use and modify as you wish with proper attributing (*citation of our preprint*)
+
+![alt-text](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/blob/main/trabecular_segmentation_video_EH_CBA_No3_20W.gif)  
 
 ____
 
