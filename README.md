@@ -10,7 +10,7 @@ The method is shared under a [?? license](link to license file), which means you
 
 ____
 
-General overview of steps:
+### General overview of steps:
 
 
 Steps for using the algorithm in Avizo:
