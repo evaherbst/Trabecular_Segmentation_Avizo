@@ -6,30 +6,38 @@ Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Fe
 
 :computer: CT scan data from our paper can be found on [Figshare](link to figshare account)
 
-The method is shared under a [?? license](link to license file), which means you can use and modify as you wish, but *please cite our preprint if you do so*.
+The method is shared under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), which means you can use and modify as you wish with proper attributing (*citation of our preprint*)
 
 ____
 
-### Instructions
+### Overview of the Method:
+ Essentially our recipe “shrink wraps” the marrow space and then selects the bone inside this volume, which = your trabeculae.
+ This is how it works:
+- Erosion and dilation by 3px to remove isolated pores or sinuses in the bone that are not part of inter-trabecular space
+- Closing algorithm (25pt) to “shrink wrap” trabecular space so that it includes trabeculae.
+- Arithmetic (takes shrink wrapped trabecular space - actual trabecular space to get trabeculae)
+- Erosion and dilation by 1px (setting: 3D ball) to clean up any noise at border.
 
 
-1. Download our Avizo [recipe]() and move to your Avizo recipes folder. This enables you to access the recipe from inside Avizo: it will show up when you select Recipes and click on the folder icon to load the recipe.
+### Implementing the Method:
+
+
+1. Download our Avizo [recipe](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/blob/main/recipe_trabecular_segmentation_Avizo_EH.hxrecipe) and move to your Avizo recipes folder. This enables you to access the recipe from inside Avizo.
     * On Windows, the directory of the recipe folder is usually: “C:\Users\[username here]\AppData\Roaming\Thermo Fisher Scientific\Recipes”. 
 
 
 3. Filter your dataset (a non-local means 3D filter worked well for our CT data).
 
 5. Isolate your region of interest (this includes the cortical and trabecular bone as well as the marrow space). 
-   * See this [google doc](https://docs.google.com/document/d/1QbJB_ndeaJYawKlRPiMTbbQOFW05GAi_YtBxxeOHWfc/edit?usp=sharing) for a step-by-step guide of using the Avizo watershed method to isolate regions of interest during the pre-processing step. The guide was made specifically for mouse tibial epiphyses, in which the preprocessing is more intensive than in most other regions of interest because of the growth bridges connecting the epiphysis to the rest of the bone. The guide can be applied to other subjects - just omit steps that do not apply to your subject.  
+   * See this [google doc](https://docs.google.com/document/d/1QbJB_ndeaJYawKlRPiMTbbQOFW05GAi_YtBxxeOHWfc/edit?usp=sharing) for a step-by-step guide of using the Avizo watershed method to isolate regions of interest during the pre-processing step. The guide was made specifically for mouse tibial epiphyses, in which the preprocessing is more intensive than in most other regions of interest because of the growth bridges connecting the epiphysis to the rest of the bone. The guide can be applied to other subjects - just omit steps that do not apply to your subject. **The guide also includes more details about all other steps of the method implementation.**
 
 
 6. Threshold marrow space (choose appropriate threshold values for your dataset - do not just use the ones in our guide without checking)
 
 
-8. Apply (“trabecular_segmentation_April17_EH”) recipe to inter-trabecular space to segment trabeculae by going to the Recipes workspace and loading the recipe. Essentially our recipe “shrink wraps” the marrow space and then selects the bone inside this volume, which = your trabeculae.
+8. Apply the recipe to automatically segment trabeculae. Go to the Recipes workspace. From the recipes on the left, select recipe titled “trabecular_segmentation_April17_EH.hxrecipe”. For the input image, select your marrow space. Click the play button to run the automatic segmentation.
 
-
-10. Subtract trabeculae bone from epiphyseal bone to get cortical bone using Arithmetic function.
+9. Subtract trabeculae bone from epiphyseal bone to get cortical bone using Arithmetic function.
 
 **Your outputs are the following binary objects: marrow space, total epiphyseal bone, trabecular bone, cortical bone**
   - If you have any questions about the workflow, or if anything in the guide is unclear, please create an Issue in this github repository or contact me at: eva.herbst *at* pim.uzh.ch  
