@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Macro name="trabecular_segmentation_April17_EH">
+  <Doc contents="1 pt ball erosion and dilation at end to clean up specs at border"/>
+  <StepGraph>
+    <Step uid="9e38919f-342c-497c-8736-01544e4f7210">
+      <CommonInfo productName="" productVersion=""/>
+      <ToolInfo action="INPUT_STEP"/>
+      <StepInfo areVolatile="0" name="Input (inputB)" isResultSavedInRecordMode="0" comment="" paused="0" isResultExportedInPool="0" outputName=""/>
+    </Step>
+    <Step uid="f3b70f8d-6ab9-41fc-8899-0b01ecba8efd">
+      <CommonInfo room="HxRecipesWorkroom" reuseRoom="0" productName="Avizo" productVersion="2020.1"/>
+      <ToolInfo resourceKey="sphereerode3d" action="MODULE_TOOL" label="Erosion 2"/>
+      <StepInfo areVolatile="0" name="Module:Erosion 2" isResultSavedInRecordMode="0" comment="" paused="0" isResultExportedInPool="0" outputName=""/>
+      <Action getResultCommands="" isReproducible="1" initCommands="create sphereerode3d &quot;Erosion 2&quot;&#xa;&quot;Erosion 2&quot; setIconPosition 160 53&#xa;&quot;Erosion 2&quot; setVar &quot;CustomHelp&quot; {sphereerode3d.html}&#xa;&quot;Erosion 2&quot; Type setState {type Ball}&#xa;&quot;Erosion 2&quot; interpretation setValue 0&#xa;&quot;Erosion 2&quot; outputLocation setIndex 0 0&#xa;&quot;Erosion 2&quot; inputImage connect &quot;intertrabecular-space&quot;&#xa;&quot;Erosion 2&quot; size setMinMax 0 1 2147483648&#xa;&quot;Erosion 2&quot; size setValue 0 3&#xa;&quot;Erosion 2&quot; precision setIndex 0 0&#xa;&quot;Erosion 2&quot; applyTransformToResult 1&#xa;&quot;Erosion 2&quot; fire&#xa;&quot;Erosion 2&quot; setViewerMask 16383&#xa;&quot;Erosion 2&quot; select&#xa;&quot;Erosion 2&quot; setPickable 1&#xa;" modifyInput="" applyCommands="" canBePaused="1" commandsNeedReplacement="1"/>
+      <Parameters>
+        <Parameter name="Type" value="Ball"/>
+        <Parameter name="interpretation" value="0"/>
+        <Parameter name="precision" value="0"/>
+        <Parameter name="size" value="3"/>
+      </Parameters>
+      <Connections>
+        <Connection name="inputImage" uid="9e38919f-342c-497c-8736-01544e4f7210" resultSlot="-1"/>
+      </Connections>
+      <Results>
+        <Result resultSlot="0"/>
+      </Results>
+    </Step>
+    <Step uid="7377fda3-dd3a-41de-b1a7-75bcd8a243b0">
+      <CommonInfo room="HxRecipesWorkroom" reuseRoom="0" productName="Avizo" productVersion="2020.1"/>
+      <ToolInfo resourceKey="spheredilate3d" action="MODULE_TOOL" label="Dilation 5"/>
+      <StepInfo areVolatile="0" name="Module:Dilation 5" isResultSavedInRecordMode="0" comment="" paused="0" isResultExportedInPool="0" outputName=""/>
+      <Action getResultCommands="" isReproducible="1" initCommands="create spheredilate3d &quot;Dilation 5&quot;&#xa;&quot;Dilation 5&quot; setIconPosition 160 53&#xa;&quot;Dilation 5&quot; setVar &quot;CustomHelp&quot; {spheredilate3d.html}&#xa;&quot;Dilation 5&quot; Type setState {type Ball}&#xa;&quot;Dilation 5&quot; interpretation setValue 0&#xa;&quot;Dilation 5&quot; outputLocation setIndex 0 0&#xa;&quot;Dilation 5&quot; inputImage connect &quot;intertrabecular-space.eroded&quot;&#xa;&quot;Dilation 5&quot; size setMinMax 0 1 2147483648&#xa;&quot;Dilation 5&quot; size setValue 0 3&#xa;&quot;Dilation 5&quot; precision setIndex 0 0&#xa;&quot;Dilation 5&quot; applyTransformToResult 1&#xa;&quot;Dilation 5&quot; fire&#xa;&quot;Dilation 5&quot; setViewerMask 16383&#xa;&quot;Dilation 5&quot; select&#xa;&quot;Dilation 5&quot; setPickable 1&#xa;" modifyInput="" applyCommands="" canBePaused="1" commandsNeedReplacement="1"/>
+      <Parameters>
+        <Parameter name="Type" value="Ball"/>
+        <Parameter name="interpretation" value="0"/>
+        <Parameter name="precision" value="0"/>
+        <Parameter name="size" value="3"/>
+      </Parameters>
+      <Connections>
+        <Connection name="inputImage" uid="f3b70f8d-6ab9-41fc-8899-0b01ecba8efd" resultSlot="0"/>
+      </Connections>
+      <Results>
+        <Result resultSlot="0"/>
+      </Results>
+    </Step>
+    <Step uid="ab549199-ff20-41a1-8108-f9e1c24fb3f6">
+      <CommonInfo room="HxRecipesWorkroom" reuseRoom="0" productName="Avizo" productVersion="2020.1"/>
+      <ToolInfo resourceKey="sphereclosing3d" action="MODULE_TOOL" label="Closing"/>
+      <StepInfo areVolatile="0" name="Module:Closing" isResultSavedInRecordMode="0" comment="" paused="0" isResultExportedInPool="0" outputName=""/>
+      <Action getResultCommands="" isReproducible="1" initCommands="create sphereclosing3d &quot;Closing&quot;&#xa;&quot;Closing&quot; setIconPosition 160 53&#xa;&quot;Closing&quot; setVar &quot;CustomHelp&quot; {sphereclosing3d.html}&#xa;&quot;Closing&quot; Type setState {type Ball}&#xa;&quot;Closing&quot; interpretation setValue 0&#xa;&quot;Closing&quot; outputLocation setIndex 0 0&#xa;&quot;Closing&quot; inputImage connect &quot;intertrabecular-space.dilated&quot;&#xa;&quot;Closing&quot; size setMinMax 0 1 2147483648&#xa;&quot;Closing&quot; size setValue 0 25&#xa;&quot;Closing&quot; precision setIndex 0 0&#xa;&quot;Closing&quot; applyTransformToResult 1&#xa;&quot;Closing&quot; fire&#xa;&quot;Closing&quot; setViewerMask 16383&#xa;&quot;Closing&quot; select&#xa;&quot;Closing&quot; setPickable 1&#xa;" modifyInput="" applyCommands="" canBePaused="1" commandsNeedReplacement="1"/>
+      <Parameters>
+        <Parameter name="Type" value="Ball"/>
+        <Parameter name="interpretation" value="0"/>
+        <Parameter name="precision" value="0"/>
+        <Parameter name="size" value="25"/>
+      </Parameters>
+      <Connections>
+        <Connection name="inputImage" uid="7377fda3-dd3a-41de-b1a7-75bcd8a243b0" resultSlot="0"/>
+      </Connections>
+      <Results>
+        <Result resultSlot="0"/>
+      </Results>
+    </Step>
+    <Step uid="db20e2ca-02cc-4253-9e55-2edd3597acc1">
+      <CommonInfo room="HxRecipesWorkroom" reuseRoom="0" productName="Avizo" productVersion="2020.1"/>
+      <ToolInfo resourceKey="HxArithmetic" action="MODULE_TOOL" label="Arithmetic 6"/>
+      <StepInfo areVolatile="0" name="Module:Arithmetic 6" isResultSavedInRecordMode="0" comment="" paused="0" isResultExportedInPool="0" outputName=""/>
+      <Action getResultCommands="" isReproducible="1" initCommands="create HxArithmetic &quot;Arithmetic 6&quot;&#xa;&quot;Arithmetic 6&quot; setIconPosition 160 53&#xa;&quot;Arithmetic 6&quot; setVar &quot;CustomHelp&quot; {HxArithmetic}&#xa;&quot;Arithmetic 6&quot; inputA connect &quot;intertrabecular-space.closing&quot;&#xa;&quot;Arithmetic 6&quot; inputB connect &quot;intertrabecular-space&quot;&#xa;&quot;Arithmetic 6&quot; fire&#xa;&quot;Arithmetic 6&quot; resultChannels setIndex 0 0&#xa;&quot;Arithmetic 6&quot; nValues setMinMax 0 -16777216 16777216&#xa;&quot;Arithmetic 6&quot; nValues setValue 0 1&#xa;&quot;Arithmetic 6&quot; expr0 setState {A-B}&#xa;&quot;Arithmetic 6&quot; resultType setValue 0&#xa;&quot;Arithmetic 6&quot; resultLocation setValue 0&#xa;&quot;Arithmetic 6&quot; resolution setMinMax 0 1 100000&#xa;&quot;Arithmetic 6&quot; resolution setValue 0 64&#xa;&quot;Arithmetic 6&quot; resolution setMinMax 1 1 100000&#xa;&quot;Arithmetic 6&quot; resolution setValue 1 64&#xa;&quot;Arithmetic 6&quot; resolution setMinMax 2 1 100000&#xa;&quot;Arithmetic 6&quot; resolution setValue 2 64&#xa;&quot;Arithmetic 6&quot; minBox setMinMax 0 -3.40282346638529e+038 3.40282346638529e+038&#xa;&quot;Arithmetic 6&quot; minBox setValue 0 -1&#xa;&quot;Arithmetic 6&quot; minBox setMinMax 1 -3.40282346638529e+038 3.40282346638529e+038&#xa;&quot;Arithmetic 6&quot; minBox setValue 1 -1&#xa;&quot;Arithmetic 6&quot; minBox setMinMax 2 -3.40282346638529e+038 3.40282346638529e+038&#xa;&quot;Arithmetic 6&quot; minBox setValue 2 -1&#xa;&quot;Arithmetic 6&quot; maxBox setMinMax 0 -3.40282346638529e+038 3.40282346638529e+038&#xa;&quot;Arithmetic 6&quot; maxBox setValue 0 1&#xa;&quot;Arithmetic 6&quot; maxBox setMinMax 1 -3.40282346638529e+038 3.40282346638529e+038&#xa;&quot;Arithmetic 6&quot; maxBox setValue 1 1&#xa;&quot;Arithmetic 6&quot; maxBox setMinMax 2 -3.40282346638529e+038 3.40282346638529e+038&#xa;&quot;Arithmetic 6&quot; maxBox setValue 2 1&#xa;&quot;Arithmetic 6&quot; options setValue 0 0&#xa;&quot;Arithmetic 6&quot; options setToggleVisible 0 1&#xa;&quot;Arithmetic 6&quot; applyTransformToResult 1&#xa;&quot;Arithmetic 6&quot; fire&#xa;&quot;Arithmetic 6&quot; setViewerMask 16383&#xa;&quot;Arithmetic 6&quot; select&#xa;&quot;Arithmetic 6&quot; setPickable 1&#xa;" modifyInput="" applyCommands="" canBePaused="1" commandsNeedReplacement="1"/>
+      <Parameters>
+        <Parameter name="expr0" value="A-B"/>
+        <Parameter name="options" value="0"/>
+        <Parameter name="resultChannels" value="0"/>
+        <Parameter name="resultType" value="0"/>
+      </Parameters>
+      <Connections>
+        <Connection name="inputA" uid="ab549199-ff20-41a1-8108-f9e1c24fb3f6" resultSlot="0"/>
+        <Connection name="inputB" uid="9e38919f-342c-497c-8736-01544e4f7210" resultSlot="-1"/>
+      </Connections>
+      <Results>
+        <Result resultSlot="0"/>
+      </Results>
+    </Step>
+    <Step uid="aefc930a-6c4a-4a50-88f6-e037121676c4">
+      <CommonInfo room="HxWorkroomMain" reuseRoom="0" productName="Avizo" productVersion="2020.1"/>
+      <ToolInfo resourceKey="sphereerode3d" action="MODULE_TOOL" label="Erosion"/>
+      <StepInfo areVolatile="0" name="Module:Erosion" isResultSavedInRecordMode="0" comment="" paused="0" isResultExportedInPool="0" outputName=""/>
+      <Action getResultCommands="" isReproducible="1" initCommands="create sphereerode3d &quot;Erosion&quot;&#xa;&quot;Erosion&quot; setIconPosition 495 413&#xa;&quot;Erosion&quot; setVar &quot;CustomHelp&quot; {sphereerode3d.html}&#xa;&quot;Erosion&quot; Type setState {type Ball}&#xa;&quot;Erosion&quot; interpretation setValue 0&#xa;&quot;Erosion&quot; outputLocation setIndex 0 0&#xa;&quot;Erosion&quot; inputImage connect &quot;Result2.am&quot;&#xa;&quot;Erosion&quot; size setMinMax 0 1 2147483648&#xa;&quot;Erosion&quot; size setValue 0 1&#xa;&quot;Erosion&quot; precision setIndex 0 0&#xa;&quot;Erosion&quot; applyTransformToResult 1&#xa;&quot;Erosion&quot; fire&#xa;&quot;Erosion&quot; setViewerMask 16383&#xa;&quot;Erosion&quot; select&#xa;&quot;Erosion&quot; setPickable 1&#xa;" modifyInput="" applyCommands="" canBePaused="1" commandsNeedReplacement="1"/>
+      <Parameters>
+        <Parameter name="Type" value="Ball"/>
+        <Parameter name="interpretation" value="0"/>
+        <Parameter name="precision" value="0"/>
+        <Parameter name="size" value="1"/>
+      </Parameters>
+      <Connections>
+        <Connection name="inputImage" uid="db20e2ca-02cc-4253-9e55-2edd3597acc1" resultSlot="0"/>
+      </Connections>
+      <Results>
+        <Result resultSlot="0"/>
+      </Results>
+    </Step>
+    <Step uid="b4cd8365-2c24-40be-8c0a-a880b02eb9b6">
+      <CommonInfo room="HxWorkroomMain" reuseRoom="0" productName="Avizo" productVersion="2020.1"/>
+      <ToolInfo resourceKey="spheredilate3d" action="MODULE_TOOL" label="Dilation"/>
+      <StepInfo areVolatile="0" name="Module:Dilation" isResultSavedInRecordMode="1" comment="" paused="0" isResultExportedInPool="1" outputName=""/>
+      <Action getResultCommands="" isReproducible="1" initCommands="create spheredilate3d &quot;Dilation&quot;&#xa;&quot;Dilation&quot; setIconPosition 344 589&#xa;&quot;Dilation&quot; setVar &quot;CustomHelp&quot; {spheredilate3d.html}&#xa;&quot;Dilation&quot; Type setState {type Ball}&#xa;&quot;Dilation&quot; interpretation setValue 0&#xa;&quot;Dilation&quot; outputLocation setIndex 0 0&#xa;&quot;Dilation&quot; inputImage connect &quot;Result2.eroded&quot;&#xa;&quot;Dilation&quot; size setMinMax 0 1 2147483648&#xa;&quot;Dilation&quot; size setValue 0 1&#xa;&quot;Dilation&quot; precision setIndex 0 0&#xa;&quot;Dilation&quot; applyTransformToResult 1&#xa;&quot;Dilation&quot; fire&#xa;&quot;Dilation&quot; setViewerMask 16383&#xa;&quot;Dilation&quot; select&#xa;&quot;Dilation&quot; setPickable 1&#xa;" modifyInput="" applyCommands="" canBePaused="1" commandsNeedReplacement="1"/>
+      <Parameters>
+        <Parameter name="Type" value="Ball"/>
+        <Parameter name="interpretation" value="0"/>
+        <Parameter name="precision" value="0"/>
+        <Parameter name="size" value="1"/>
+      </Parameters>
+      <Connections>
+        <Connection name="inputImage" uid="aefc930a-6c4a-4a50-88f6-e037121676c4" resultSlot="0"/>
+      </Connections>
+      <Results>
+        <Result resultSlot="0"/>
+      </Results>
+    </Step>
+  </StepGraph>
+</Macro>
