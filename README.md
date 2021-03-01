@@ -4,9 +4,9 @@
 Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Felder](https://github.com/alessandrofelder). 
 
 
-:pencil:  <!-- Please read our [preprint](link to preprint), which we are submitting to Royal Society Open Science. -->
+:pencil:  Please read our [preprint](link to preprint), which we wrote with Lucinda A. Evans, Sara Ajami, Behzad Javaheri, and Andrew A. Pitsillides.
 
-:computer: CT scan data from our paper can be found on [Figshare](link to figshare account)
+:computer: CT scan data from our paper can be found on [Figshare](https://figshare.com/projects/Trabecular_and_Cortical_Bone_Segmentation_Method/99434)
 
 The method is shared under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), which means you can use and modify as you wish with proper attributing (*citation of our preprint*)
 
@@ -50,4 +50,4 @@ ___
 
 :speech_balloon: *We would be thrilled if other researchers implemented this method in other (especially freeware) programs. The steps can be found in the [Avizo recipe file](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/blob/main/recipe_trabecular_segmentation_Avizo_EH.hxrecipe). If you do so, please get in touch so we can link to your method here!*
 
-We thank [Kamel Madi](https://www.linkedin.com/in/kamelmadi/?locale=en_US) for sharing his Avizo expertise with us.
+We thank [Kamel Madi](https://www.linkedin.com/in/kamelmadi/?locale=en_US) for sharing his Avizo expertise with us. We thank the [OATech Network+](https://www.oatechnetwork.org/) for funding our research. 
