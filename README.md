@@ -35,7 +35,7 @@ ____
 6. Threshold marrow space (choose appropriate threshold values for your dataset - do not just use the ones in our guide without checking)
 
 
-8. Apply the recipe to automatically segment trabeculae. Go to the Recipes workspace. From the recipes on the left, select recipe titled “trabecular_segmentation_April17_EH.hxrecipe”. For the input image, select your marrow space. Click the play button to run the automatic segmentation.
+8. Apply the recipe to automatically segment trabeculae. Go to the Recipes workspace. From the recipes on the left, select recipe titled “recipe_trabecular_segmentation_Avizo_EH”. For the input image, select your marrow space. Click the play button to run the automatic segmentation.
 
 9. Subtract trabeculae bone from epiphyseal bone to get cortical bone using Arithmetic function.
 
@@ -44,6 +44,6 @@ ____
 
 ___
 
-:speech_balloon: *We would be thrilled if other researchers implemented this method in other (especially freeware) programs. The steps can be found in the [Avizo recipe file](). If you do so, please get in touch so we can link to your method here!*
+:speech_balloon: *We would be thrilled if other researchers implemented this method in other (especially freeware) programs. The steps can be found in the [Avizo recipe file](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/blob/main/recipe_trabecular_segmentation_Avizo_EH.hxrecipe). If you do so, please get in touch so we can link to your method here!*
 
 We thank [Kamel Madi](https://www.linkedin.com/in/kamelmadi/?locale=en_US) for sharing his Avizo expertise with us.
