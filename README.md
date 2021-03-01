@@ -6,7 +6,7 @@ Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Fe
 
 :computer: CT scan data from our paper can be found on [Figshare](link to figshare account)
 
-The method is shared under a [?? license](link to license file), which means you can use and modify as you wish, but please cite our preprint if you do so.
+The method is shared under a [?? license](link to license file), which means you can use and modify as you wish, but *please cite our preprint if you do so*.
 
 ____
 
