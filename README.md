@@ -10,10 +10,8 @@ The method is shared under a [?? license](link to license file), which means you
 
 ____
 
-### General overview of steps:
+### Instructions
 
-
-Steps for using the algorithm in Avizo:
 
 1. Download our Avizo [recipe]() and move to your Avizo recipes folder. This enables you to access the recipe from inside Avizo: it will show up when you select Recipes and click on the folder icon to load the recipe.
     * On Windows, the directory of the recipe folder is usually: “C:\Users\[username here]\AppData\Roaming\Thermo Fisher Scientific\Recipes”. 
