@@ -4,7 +4,7 @@
 Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Felder](https://github.com/alessandrofelder). 
 
 
-:pencil:  Please read our [preprint](link to preprint), which we wrote with Lucinda A. Evans, Sara Ajami, Behzad Javaheri, and Andrew A. Pitsillides.
+:pencil:  Please read our [preprint](https://www.biorxiv.org/content/10.1101/2021.03.02.433409v1), which we wrote with Lucinda A. Evans, Sara Ajami, Behzad Javaheri, and Andrew A. Pitsillides.
 
 :computer: CT scan data from our paper can be found on [Figshare](https://figshare.com/projects/Trabecular_and_Cortical_Bone_Segmentation_Method/99434)
 
