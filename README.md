@@ -4,7 +4,9 @@
 Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Felder](https://github.com/alessandrofelder). 
 
 
-:pencil:  Please read our [preprint](https://www.biorxiv.org/content/10.1101/2021.03.02.433409v1), which we wrote with Lucinda A. Evans, Sara Ajami, Behzad Javaheri, and Andrew A. Pitsillides. If you use this method, please cite our preprint.
+:pencil:  Please read our [preprint](https://www.biorxiv.org/content/10.1101/2021.03.02.433409v1), which we wrote with Lucinda A. Evans, Sara Ajami, Behzad Javaheri, and Andrew A. Pitsillides. If you use this method, please cite our preprint and the doi of the most recent Github release:
+[![DOI](https://zenodo.org/badge/341621577.svg)](https://zenodo.org/badge/latestdoi/341621577)
+
 
 :computer: CT scan data from our paper can be found on [Figshare](https://figshare.com/projects/Trabecular_and_Cortical_Bone_Segmentation_Method/99434)
 
@@ -49,7 +51,7 @@ ____
 ___
 **Validation**
 We also developed an imageJ macro to check "intersection over union" to compare inter-user differences and the effects of manual removal of small inlets.
-The imageJ macro can be found [here](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/tree/main/validation)
+The imageJ macro can be found [here](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/tree/main/validation).
 ___
 :speech_balloon: *We would be thrilled if other researchers implemented this method in other (especially freeware) programs. The steps can be found in the [Avizo recipe file](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/blob/main/recipe_trabecular_segmentation_Avizo_EH.hxrecipe). If you do so, please get in touch so we can link to your method here!*
 
