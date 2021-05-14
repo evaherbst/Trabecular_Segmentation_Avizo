@@ -47,7 +47,10 @@ ____
   - If you have any questions about the workflow, or if anything in the guide is unclear, please create an Issue in this github repository or contact me at: eva.herbst *at* pim.uzh.ch  
 
 ___
-
+**Validation**
+We also developed an imageJ macro to check "intersection over union" to compare inter-user differences and the effects of manual removal of small inlets.
+The imageJ macro can be found [here](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/tree/main/validation)
+___
 :speech_balloon: *We would be thrilled if other researchers implemented this method in other (especially freeware) programs. The steps can be found in the [Avizo recipe file](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/blob/main/recipe_trabecular_segmentation_Avizo_EH.hxrecipe). If you do so, please get in touch so we can link to your method here!*
 
 We thank [Kamel Madi](https://www.linkedin.com/in/kamelmadi/?locale=en_US) for sharing his Avizo expertise with us. We thank the [OATech Network+](https://www.oatechnetwork.org/) for funding our research. 
