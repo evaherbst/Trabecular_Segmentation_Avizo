@@ -21,7 +21,7 @@ ____
  This is how it works:
 - Erosion and dilation by 3px to remove isolated pores or sinuses in the bone that are not part of inter-trabecular space
 - Closing algorithm (25pt) to “shrink wrap” trabecular space so that it includes trabeculae.
-- Arithmetic (takes shrink wrapped trabecular space - actual trabecular space after 3pt erosion to get trabeculae)
+- Arithmetic (takes shrink wrapped trabecular space - marrow space after 3pt erosion (e.g. marrow space after small sinuses are removed) to get trabeculae)
 - Erosion and dilation by 1px (setting: 3D ball) to clean up any noise at border.
 
 ____ 
