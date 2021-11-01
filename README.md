@@ -12,6 +12,8 @@ Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Fe
 
 The method is shared under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), which means you can use and modify as you wish with proper attributing (*citation of our preprint*)
 
+A [Youtube tutorial](https://youtu.be/cQ9sBu6SpJw) is also available.
+
 ![alt-text](https://github.com/evaherbst/Trabecular_Segmentation_Avizo/blob/main/trabecular_segmentation_video_EH_CBA_No3_20W.gif)  
 
 ____
