@@ -1,1 +1,1 @@
-Our algorith is licensed under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. Please cite our preprint if using this method.
+Our algorith is licensed under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. Please cite both our paper (https://doi.org/10.1098/rsos.210408) and our code (doi.org/10.5281/zenodo.4761679) when using this method.
