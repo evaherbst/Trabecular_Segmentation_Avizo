@@ -10,7 +10,7 @@ Developed by [Eva C. Herbst](https://github.com/evaherbst) and [Alessandro A. Fe
 
 :computer: CT scan data from our paper can be found on [Figshare](https://figshare.com/projects/Trabecular_and_Cortical_Bone_Segmentation_Method/99434)
 
-The method is shared under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), which means you can use and modify as you wish with proper attributing (*please cite both our paper and most recent github release*)
+The method is shared under [an MIT license](./LICENSE) (or alternatively, under a [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), for historical reasons). Both mean you can use and modify as you wish with proper attributing (*please cite both our paper and most recent github release*)
 
 A [Youtube tutorial](https://youtu.be/cQ9sBu6SpJw) is also available.
 
